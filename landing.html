@@ -376,101 +376,101 @@
 								<h3>UNIT 10 TASK</h3>
 							</header>
 							<p>
-						</div>DR Solution 1 with a Recovery Point Objective (RPO) of 1 hour and a Recovery Time
+					DR Solution 1 with a Recovery Point Objective (RPO) of 1 hour and a Recovery Time
 						Objective (RTO) of 8 hours while highlighting the need, for High Availability (HA).
-					</div>Definitions.
-		<div>•RPO (Recovery Point Objective); The longest duration within which data loss, due to an event is deemed
+					Definitions.
+		•RPO (Recovery Point Objective); The longest duration within which data loss, due to an event is deemed
 		acceptable, is one hour, in this scenario.</div>
-	</div>•RTO (Recovery Time Objective); The acceptable timeframe, for systems to be up and run again following a
+	•RTO (Recovery Time Objective); The acceptable timeframe, for systems to be up and run again following a
 	disaster is, within 8 hours.
-	</div>•High Availability (HA); Aims to keep the system running to maximize uptime and reduce downtime occurrences
+	•High Availability (HA); Aims to keep the system running to maximize uptime and reduce downtime occurrences
 	effectively through failover solutions that cause minimal disruptions.
-	</div>Elements of Design.
-	</div>Cloud storage, for purposes, with data duplication.
-	</div>The instant or almost instant copying of information, from systems to backup systems (in the cloud or far away
+	Elements of Design.
+	Cloud storage, for purposes, with data duplication.
+	The instant or almost instant copying of information, from systems to backup systems (in the cloud or far away
 	locations).
-	</div>Make sure that the data stays current, and that any potential incident doesn't result in, then an hour’s worth
+	Make sure that the data stays current, and that any potential incident doesn't result in, then an hour’s worth
 	of data loss.
-	</div>• Balancing the load.
-	</div>It spreads network traffic among servers or systems to maintain the applications responsiveness in case one
+	• Balancing the load.
+	It spreads network traffic among servers or systems to maintain the applications responsiveness in case one
 	server fails.
-	</div>In systems (HA systems) load balancers play a crucial role, in avoiding service disruptions by automatically
+	In systems (HA systems) load balancers play a crucial role, in avoiding service disruptions by automatically
 	rerouting traffic to functioning systems.
-	</div>• Backup Plan.
-	</div>Automated switching to the system, in case of a problem being identified in the system.
-	</div>During an emergency the system seamlessly transitions to an infrastructure such as the cloud to ensure
+	• Backup Plan.
+	Automated switching to the system, in case of a problem being identified in the system.
+	During an emergency the system seamlessly transitions to an infrastructure such as the cloud to ensure
 	operations with minimal downtime.
-	</div>If there is a breakdown, in the systems operation occurs; it will switch over from the location to a secondary
+	If there is a breakdown, in the systems operation occurs; it will switch over from the location to a secondary
 	backup site within an 8 hour RTO automatically.
-	</div>• We ensure that data loss is limited to an hour by replicating and storing snapshots in the cloud.
-	</div>Effective Strategies.
-	</div>Make sure to set up storage in locations to safeguard against disasters, in specific regions.
-	</div>Make sure to implement automated disaster recovery testing to verify that a failure occurs as intended.
-	</div>DR Solution 2 with a Recovery Point Objective (RPO) of 24 hours and a Recovery Time Objective (RTO) of 72
+	• We ensure that data loss is limited to an hour by replicating and storing snapshots in the cloud.
+	Effective Strategies.
+	Make sure to set up storage in locations to safeguard against disasters, in specific regions.
+	Make sure to implement automated disaster recovery testing to verify that a failure occurs as intended.
+	DR Solution 2 with a Recovery Point Objective (RPO) of 24 hours and a Recovery Time Objective (RTO) of 72
 	hours, without the need, for High Availability (HA).
-	</div>Here are some explanations.
-	</div> In the event of a disaster, it is possible to lose, up to 24 hours’ worth of data.
-	</div>Reaching a recovery within 72 hours is essential; this indicates that immediate system restoration is not
+	Here are some explanations.
+	In the event of a disaster, it is possible to lose, up to 24 hours’ worth of data.
+	Reaching a recovery within 72 hours is essential; this indicates that immediate system restoration is not
 	necessary.
-	</div>Continuous up time is not essential as occasional downtime is acceptable long as the system's back up and
+	Continuous up time is not essential as occasional downtime is acceptable long as the system's back up and
 	running according to the Recovery Time Objective (RTO).
-	</div>Elements of Design.
-	</div>•Backup data to the cloud daily.
-	</div>Data is stored in the cloud every day using services such as Amazon Storage, Microsoft Azure Blob Storage or
+	Elements of Design.
+	•Backup data to the cloud daily.
+	Data is stored in the cloud every day using services such as Amazon Storage, Microsoft Azure Blob Storage or
 	Google Cloud Storage.
-	</div>In the event of a disaster scenario arises at any moment, in the future; you can rest assured that the backup
+	In the event of a disaster scenario arises at any moment, in the future; you can rest assured that the backup
 	available will not be than 24 hours old, ensuring that important data is still preserved up, to date.
-	</div>Backup Options Comparison.
-	</div>No need for backup systems necessary.
-	</div>Cold Backup refers to the process of keeping data and applications in a state until they are manually
+	Backup Options Comparison.
+	No need for backup systems necessary.
+	Cold Backup refers to the process of keeping data and applications in a state until they are manually
 	recovered following an incident.
-	</div>A warm backup is a type of backup that requires some intervention and additional configuration to fully
+	A warm backup is a type of backup that requires some intervention and additional configuration to fully
 	restore services.
-	</div>•Procedure for recovery
-	</div>Recovery can occur manually without the need for HA by performing tasks such, as system boot up and data
+	•Procedure for recovery
+	Recovery can occur manually without the need for HA by performing tasks such, as system boot up and data
 	restoration.
-	</div>How It Operates.
-	</div>Data is kept in cloud storage away, from the location and in case of any issue it is recovered manually using
+	How It Operates.
+	Data is kept in cloud storage away, from the location and in case of any issue it is recovered manually using
 	the recent backup from that day.
-	</div>Noncritical business applications may not require attention allowing for a recovery period of, up to 72 hours.
-	</div>Key Recommendations.
-	</div>For conserving speeding up recovery options for both differential backups.
-	</div>Make sure to conduct tests to verify that the backups function properly and that recovery protocols are
+	Noncritical business applications may not require attention allowing for a recovery period of, up to 72 hours.
+	Key Recommendations.
+	For conserving speeding up recovery options for both differential backups.
+	Make sure to conduct tests to verify that the backups function properly and that recovery protocols are
 	established as a measure.
-	</div>DR solution 2 with a Recovery Point Objective of 5 minutes and a Recovery Time Objective of 1 hour. High
+	DR solution 2 with a Recovery Point Objective of 5 minutes and a Recovery Time Objective of 1 hour. High
 	Availability is necessary for this solution.
-	</div>Definitions.
-	</div>• With a Recovery Point Objective (RPO) of 5 minutes there is a limit on the amount of data that can be lost
+	Definitions.
+	• With a Recovery Point Objective (RPO) of 5 minutes there is a limit on the amount of data that can be lost
 	requiring continuous data replication to ensure minimal loss.
-	</div>• If there is an issue it needs to be fixed and up and running again within an hour.
-	</div>Ensuring accessibility is crucial, for High Availability (HA) where the system must remain operational without
+	• If there is an issue it needs to be fixed and up and running again within an hour.
+	Ensuring accessibility is crucial, for High Availability (HA) where the system must remain operational without
 	prolonged downtime.
-	</div>Components of Design.
-	</div>• Instant Data Duplication.
-	</div>Continuous replication of data to a location guarantees that the loss of data is minimally capped at 5
+	Components of Design.
+	• Instant Data Duplication.
+	Continuous replication of data to a location guarantees that the loss of data is minimally capped at 5
 	minutes.
-	</div>To maintain data integrity, between backup systems synchronous replication is a utilized method.
-	</div>Backup mechanisms.
-	</div>A complete duplicate setup (comprising servers, networks and storage) spread across areas.
-	</div>Involve active passive groups where both sites can manage traffic (active active) or the secondary site is
+	To maintain data integrity, between backup systems synchronous replication is a utilized method.
+	Backup mechanisms.
+	A complete duplicate setup (comprising servers, networks and storage) spread across areas.
+	Involve active passive groups where both sites can manage traffic (active active) or the secondary site is
 	ready, as a backup (active passive).
-	</div>• Automated system backup, in case of failure.
-	</div>An automated system identifies any issues. Promptly switches the service to the backup infrastructure ensuring
+	• Automated system backup, in case of failure.
+	An automated system identifies any issues. Promptly switches the service to the backup infrastructure ensuring
 	minimal to no interruption.
-	</div>Failover occurs within a timeframe of seconds, to minute. Ensure that all services are fully operational
+	Failover occurs within a timeframe of seconds, to minute. Ensure that all services are fully operational
 	before the 1-hour Recovery Time Objective (RTO) expires.
-	</div>• Disaster Recovery, as a Service often abbreviated as DRaaS;
-	</div>Cloud services provide managed services such as real time replication and failover options (, for instance AWS
+	• Disaster Recovery, as a Service often abbreviated as DRaaS;
+	Cloud services provide managed services such as real time replication and failover options (, for instance AWS
 	Elastic Disaster Recovery and Azure Site Recovery).
-	</div>In case the main system encounters issues or malfunctions, the cloud is ready to assume control without delay.
-	</div>How the process functions.
-	</div>In case of a crisis situation arises, live duplication guarantees that 5 minutes of data is forfeited, and the
+	In case the main system encounters issues or malfunctions, the cloud is ready to assume control without delay.
+	How the process functions.
+	In case of a crisis situation arises, live duplication guarantees that 5 minutes of data is forfeited, and the
 	failover process occurs spontaneously in just a matter of seconds to reduce any downtime issues effectively.
-	</div>• The entire system is restored within a time frame of than an hour, which makes it ideal, for applications,
+	• The entire system is restored within a time frame of than an hour, which makes it ideal, for applications,
 	to missions.
-	</div>Guidelines for Success.
-	</div>Use data centers located in parts of the world to reduce the chances of outages happening in one region.
-	</div>• Conduct routine failover exercises to guarantee the automated systems function smoothly.
+	Guidelines for Success.
+	Use data centers located in parts of the world to reduce the chances of outages happening in one region.
+	• Conduct routine failover exercises to guarantee the automated systems function smoothly.
 
 	</p>
 
