@@ -376,168 +376,255 @@
 								<h3>UNIT 10 TASK</h3>
 							</header>
 							<p>
-					DR Solution 1 with a Recovery Point Objective (RPO) of 1 hour and a Recovery Time
-						Objective (RTO) of 8 hours while highlighting the need, for High Availability (HA).
-					Definitions.
-							</p>	
-		<p>•RPO (Recovery Point Objective); The longest duration within which data loss, due to an event is deemed
-		acceptable, is one hour, in this scenario.</p>
-	<p>•RTO (Recovery Time Objective); The acceptable timeframe, for systems to be up and run again following a
-	disaster is, within 8 hours.</p>
-	<p>•High Availability (HA); Aims to keep the system running to maximize uptime and reduce downtime occurrences
-	effectively through failover solutions that cause minimal disruptions.</p>
-	<p>Elements of Design.</p>
-	<p>Cloud storage, for purposes, with data duplication.</p>
-	<p>The instant or almost instant copying of information, from systems to backup systems (in the cloud or far away
-	locations).</p>
-	<p>Make sure that the data stays current, and that any potential incident doesn't result in, then an hour’s worth
-	of data loss.</p>
-	<p>• Balancing the load.</p>
-	<p>It spreads network traffic among servers or systems to maintain the applications responsiveness in case one
-	server fails.</p>
-	<p>In systems (HA systems) load balancers play a crucial role, in avoiding service disruptions by automatically
-	rerouting traffic to functioning systems.</p>
-	<p>• Backup Plan.</p>
-	<p>Automated switching to the system, in case of a problem being identified in the system.</p>
-	<p>During an emergency the system seamlessly transitions to an infrastructure such as the cloud to ensure
-	operations with minimal downtime.</p>
-	<p>If there is a breakdown, in the systems operation occurs; it will switch over from the location to a secondary
-	backup site within an 8 hour RTO automatically.</p>
-	<p>• We ensure that data loss is limited to an hour by replicating and storing snapshots in the cloud.</p>
-	<p>Effective Strategies.</p>
-	<p>Make sure to set up storage in locations to safeguard against disasters, in specific regions.</p>
-	<p>Make sure to implement automated disaster recovery testing to verify that a failure occurs as intended.</p>
-	<p>DR Solution 2 with a Recovery Point Objective (RPO) of 24 hours and a Recovery Time Objective (RTO) of 72
-	hours, without the need, for High Availability (HA).</p>
-	<p>Here are some explanations.</p>
-	<p>In the event of a disaster, it is possible to lose, up to 24 hours’ worth of data.</p>
-	<p>Reaching a recovery within 72 hours is essential; this indicates that immediate system restoration is not
-	necessary.</p>
-	<p>Continuous up time is not essential as occasional downtime is acceptable long as the system's back up and
-	running according to the Recovery Time Objective (RTO).</p>
-	<p>Elements of Design.</p>
-	<p>•Backup data to the cloud daily.</p>
-	<p>Data is stored in the cloud every day using services such as Amazon Storage, Microsoft Azure Blob Storage or
-	Google Cloud Storage.</p>
-	<p>In the event of a disaster scenario arises at any moment, in the future; you can rest assured that the backup
-	available will not be than 24 hours old, ensuring that important data is still preserved up, to date.</p>
-	<p>Backup Options Comparison.</p>
-	<p>No need for backup systems necessary.</p>
-	<p>Cold Backup refers to the process of keeping data and applications in a state until they are manually
-	recovered following an incident.</p>
-	<p>A warm backup is a type of backup that requires some intervention and additional configuration to fully
-	restore services.</p>
-	<p>•Procedure for recovery</p>
-	<p>Recovery can occur manually without the need for HA by performing tasks such, as system boot up and data
-	restoration.</p>
-	<p>How It Operates.</p>
-	<p>Data is kept in cloud storage away, from the location and in case of any issue it is recovered manually using
-	the recent backup from that day.</p>
-	<p>Noncritical business applications may not require attention allowing for a recovery period of, up to 72 hours.</p>
-	<p>Key Recommendations.</p>
-	<p>For conserving speeding up recovery options for both differential backups.</p>
-	<p>Make sure to conduct tests to verify that the backups function properly and that recovery protocols are
-	established as a measure.</p>
-	<p>DR solution 2 with a Recovery Point Objective of 5 minutes and a Recovery Time Objective of 1 hour. High
-	Availability is necessary for this solution.</p>
-	<p>Definitions.</p>
-	<p>• With a Recovery Point Objective (RPO) of 5 minutes there is a limit on the amount of data that can be lost
-	requiring continuous data replication to ensure minimal loss.</p>
-	<p>• If there is an issue it needs to be fixed and up and running again within an hour.</p>
-	<p>Ensuring accessibility is crucial, for High Availability (HA) where the system must remain operational without
-	prolonged downtime.</p>
-	<p>Components of Design.</p>
-	<p>• Instant Data Duplication.</p>
-	<p>Continuous replication of data to a location guarantees that the loss of data is minimally capped at 5
-	minutes.</p>
-	<p>To maintain data integrity, between backup systems synchronous replication is a utilized method.
-	Backup mechanisms.</p>
-	<p>A complete duplicate setup (comprising servers, networks and storage) spread across areas.</p>
-	<p>Involve active passive groups where both sites can manage traffic (active active) or the secondary site is
-	ready, as a backup (active passive).</p>
-	<p>• Automated system backup, in case of failure.</p>
-	<p>An automated system identifies any issues. Promptly switches the service to the backup infrastructure ensuring
-	minimal to no interruption.</p>
-	<p>Failover occurs within a timeframe of seconds, to minute. Ensure that all services are fully operational
-	before the 1-hour Recovery Time Objective (RTO) expires.</p>
-	<p>• Disaster Recovery, as a Service often abbreviated as DRaaS;</p>
-	<p>Cloud services provide managed services such as real time replication and failover options (, for instance AWS
-	Elastic Disaster Recovery and Azure Site Recovery).</p>
-	<p>In case the main system encounters issues or malfunctions, the cloud is ready to assume control without delay.</p>
-	<p>How the process functions.</p>
-	<p>In case of a crisis situation arises, live duplication guarantees that 5 minutes of data is forfeited, and the
-	failover process occurs spontaneously in just a matter of seconds to reduce any downtime issues effectively.</p>
-	<p>• The entire system is restored within a time frame of than an hour, which makes it ideal, for applications,
-	to missions.</p>
-	<p>Guidelines for Success.</p>
-	<p>Use data centers located in parts of the world to reduce the chances of outages happening in one region.</p>
-	<p>• Conduct routine failover exercises to guarantee the automated systems function smoothly.</p>
+								DR Solution 1 with a Recovery Point Objective (RPO) of 1 hour and a Recovery Time
+								Objective (RTO) of 8 hours while highlighting the need, for High Availability (HA).
+								Definitions.
+							</p>
+							<p>•RPO (Recovery Point Objective); The longest duration within which data loss, due to an
+								event is deemed
+								acceptable, is one hour, in this scenario.</p>
+							<p>•RTO (Recovery Time Objective); The acceptable timeframe, for systems to be up and run
+								again following a
+								disaster is, within 8 hours.</p>
+							<p>•High Availability (HA); Aims to keep the system running to maximize uptime and reduce
+								downtime occurrences
+								effectively through failover solutions that cause minimal disruptions.</p>
+							<p>Elements of Design.</p>
+							<p>Cloud storage, for purposes, with data duplication.</p>
+							<p>The instant or almost instant copying of information, from systems to backup systems (in
+								the cloud or far away
+								locations).</p>
+							<p>Make sure that the data stays current, and that any potential incident doesn't result in,
+								then an hour’s worth
+								of data loss.</p>
+							<p>• Balancing the load.</p>
+							<p>It spreads network traffic among servers or systems to maintain the applications
+								responsiveness in case one
+								server fails.</p>
+							<p>In systems (HA systems) load balancers play a crucial role, in avoiding service
+								disruptions by automatically
+								rerouting traffic to functioning systems.</p>
+							<p>• Backup Plan.</p>
+							<p>Automated switching to the system, in case of a problem being identified in the system.
+							</p>
+							<p>During an emergency the system seamlessly transitions to an infrastructure such as the
+								cloud to ensure
+								operations with minimal downtime.</p>
+							<p>If there is a breakdown, in the systems operation occurs; it will switch over from the
+								location to a secondary
+								backup site within an 8 hour RTO automatically.</p>
+							<p>• We ensure that data loss is limited to an hour by replicating and storing snapshots in
+								the cloud.</p>
+							<p>Effective Strategies.</p>
+							<p>Make sure to set up storage in locations to safeguard against disasters, in specific
+								regions.</p>
+							<p>Make sure to implement automated disaster recovery testing to verify that a failure
+								occurs as intended.</p>
+							<p>DR Solution 2 with a Recovery Point Objective (RPO) of 24 hours and a Recovery Time
+								Objective (RTO) of 72
+								hours, without the need, for High Availability (HA).</p>
+							<p>Here are some explanations.</p>
+							<p>In the event of a disaster, it is possible to lose, up to 24 hours’ worth of data.</p>
+							<p>Reaching a recovery within 72 hours is essential; this indicates that immediate system
+								restoration is not
+								necessary.</p>
+							<p>Continuous up time is not essential as occasional downtime is acceptable long as the
+								system's back up and
+								running according to the Recovery Time Objective (RTO).</p>
+							<p>Elements of Design.</p>
+							<p>•Backup data to the cloud daily.</p>
+							<p>Data is stored in the cloud every day using services such as Amazon Storage, Microsoft
+								Azure Blob Storage or
+								Google Cloud Storage.</p>
+							<p>In the event of a disaster scenario arises at any moment, in the future; you can rest
+								assured that the backup
+								available will not be than 24 hours old, ensuring that important data is still preserved
+								up, to date.</p>
+							<p>Backup Options Comparison.</p>
+							<p>No need for backup systems necessary.</p>
+							<p>Cold Backup refers to the process of keeping data and applications in a state until they
+								are manually
+								recovered following an incident.</p>
+							<p>A warm backup is a type of backup that requires some intervention and additional
+								configuration to fully
+								restore services.</p>
+							<p>•Procedure for recovery</p>
+							<p>Recovery can occur manually without the need for HA by performing tasks such, as system
+								boot up and data
+								restoration.</p>
+							<p>How It Operates.</p>
+							<p>Data is kept in cloud storage away, from the location and in case of any issue it is
+								recovered manually using
+								the recent backup from that day.</p>
+							<p>Noncritical business applications may not require attention allowing for a recovery
+								period of, up to 72 hours.</p>
+							<p>Key Recommendations.</p>
+							<p>For conserving speeding up recovery options for both differential backups.</p>
+							<p>Make sure to conduct tests to verify that the backups function properly and that recovery
+								protocols are
+								established as a measure.</p>
+							<p>DR solution 2 with a Recovery Point Objective of 5 minutes and a Recovery Time Objective
+								of 1 hour. High
+								Availability is necessary for this solution.</p>
+							<p>Definitions.</p>
+							<p>• With a Recovery Point Objective (RPO) of 5 minutes there is a limit on the amount of
+								data that can be lost
+								requiring continuous data replication to ensure minimal loss.</p>
+							<p>• If there is an issue it needs to be fixed and up and running again within an hour.</p>
+							<p>Ensuring accessibility is crucial, for High Availability (HA) where the system must
+								remain operational without
+								prolonged downtime.</p>
+							<p>Components of Design.</p>
+							<p>• Instant Data Duplication.</p>
+							<p>Continuous replication of data to a location guarantees that the loss of data is
+								minimally capped at 5
+								minutes.</p>
+							<p>To maintain data integrity, between backup systems synchronous replication is a utilized
+								method.
+								Backup mechanisms.</p>
+							<p>A complete duplicate setup (comprising servers, networks and storage) spread across
+								areas.</p>
+							<p>Involve active passive groups where both sites can manage traffic (active active) or the
+								secondary site is
+								ready, as a backup (active passive).</p>
+							<p>• Automated system backup, in case of failure.</p>
+							<p>An automated system identifies any issues. Promptly switches the service to the backup
+								infrastructure ensuring
+								minimal to no interruption.</p>
+							<p>Failover occurs within a timeframe of seconds, to minute. Ensure that all services are
+								fully operational
+								before the 1-hour Recovery Time Objective (RTO) expires.</p>
+							<p>• Disaster Recovery, as a Service often abbreviated as DRaaS;</p>
+							<p>Cloud services provide managed services such as real time replication and failover
+								options (, for instance AWS
+								Elastic Disaster Recovery and Azure Site Recovery).</p>
+							<p>In case the main system encounters issues or malfunctions, the cloud is ready to assume
+								control without delay.</p>
+							<p>How the process functions.</p>
+							<p>In case of a crisis situation arises, live duplication guarantees that 5 minutes of data
+								is forfeited, and the
+								failover process occurs spontaneously in just a matter of seconds to reduce any downtime
+								issues effectively.</p>
+							<p>• The entire system is restored within a time frame of than an hour, which makes it
+								ideal, for applications,
+								to missions.</p>
+							<p>Guidelines for Success.</p>
+							<p>Use data centers located in parts of the world to reduce the chances of outages happening
+								in one region.</p>
+							<p>• Conduct routine failover exercises to guarantee the automated systems function
+								smoothly.</p>
 
 
-	</div>
-	</div>
-	</section>
-	</section>
-
-	<!-- Three -->
-
-
-	</div>
-
-	<!-- Contact -->
-	<section id="contact">
-		<div class="inner">
-			<section>
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field half">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
 						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Clear" /></li>
-					</ul>
-				</form>
-			</section>
-			<section class="split">
-				<section>
-					<div class="contact-method">
-						<span class="icon solid alt fa-envelope"></span>
-						<h3>Email</h3>
-						<a href="#">fk24199@essex.ac.uk</a>
 					</div>
 				</section>
+				<section>
+					<a href="generic.html" class="image">
+						<img src="images/pic08.jpg" alt="" data-position="center center" />
+					</a>
+					<div class="content">
+						<div class="inner">
+							<header class="major">
+								<h3>UNIT 11</h3>
+							</header>
+							<p>In the changing world of technology and cybersecurity efforts, like Security and Risk
+								Management are constantly adjusting to face obstacles brought on by trends, like
+								artificial intelligence (AI) DevSecOps practices, Enterprise Risk Management (ERM) and
+								automation. These trends come with their sets of benefits and hurdles that shape the
+								direction of Security and Risk Management.
 
+								AI is changing security risk management by automating the identification of threats and
+								responses, to them to enhance efficiency and precision levels in the process.However it
+								is important to address challenges such as biases in AI and false alarms.To sum up the
+								influence of AI on security risk management will primarily be centered around
+								strengthening confidence and resilience, in security operations.
+
+								DevSecOps incorporates security into the development process by promoting teamwork,
+								between developers and security specialists in order to enhance the delivery of software
+								efficiently; however it necessitates changes and resources for training purposes. As an
+								increasing number of companies embrace DevSecOps practices; it is anticipated to evolve
+								into a methodology, in the realm of cybersecurity.
+
+								ERM adopts a strategy, for handling risks by integrating security measures with business
+								goals in mind.Even though it may be challenging to put into practice EPM enhances
+								decision making processes by taking into account risks such, as cybersecurity and
+								financial vulnerabilities.
+
+								Utilizing automation, in SRMs enhances effectiveness by managing tasks and facilitating
+								incident resolution; nevertheless depending too heavily on automation could pose risks
+								necessitating a careful equilibrium, between human supervision and automated operations.
+
+								In the coming years and beyond, in the realm of supply chain risk management (SRMs) the
+								integration of intelligence (AI) and DevSecOps is anticipated to significantly shape
+								practices moving forward as continuous research endeavors aim to tune these
+								methodologies to bolster security measures and mitigate risks effectively.
+
+							</p>
+
+						</div>
+					</div>
+				</section>
 			</section>
-		</div>
-	</section>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="icons">
+			<!-- Three -->
 
-				<li><a href="https://github.com/FarhadK-UNI" class="icon brands alt fa-github"><span
-							class="label">GitHub</span></a></li>
-				<li><a href="https://www.linkedin.com/in/farhad-karimov/" class="icon brands alt fa-linkedin-in"><span
-							class="label">LinkedIn</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Essex University</li>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
+
 		</div>
-	</footer>
+
+		<!-- Contact -->
+		<section id="contact">
+			<div class="inner">
+				<section>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" class="primary" /></li>
+							<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+				</section>
+				<section class="split">
+					<section>
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<h3>Email</h3>
+							<a href="#">fk24199@essex.ac.uk</a>
+						</div>
+					</section>
+
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+
+					<li><a href="https://github.com/FarhadK-UNI" class="icon brands alt fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/farhad-karimov/"
+							class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Essex University</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
 
 	</div>
 
